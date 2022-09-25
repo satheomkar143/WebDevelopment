@@ -1,0 +1,24 @@
+p{
+    color: blueviolet;
+   // background-color: yellow;
+    font-size: 30px;
+    text-align: justify;
+    text-decoration: overline;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: sofia, sans-serif;
+   // background-image: url(/images/564835.jpg);
+}
+h1{
+    text-indent: 100px;
+    color: magenta;
+    font-family: monospace;
+    letter-spacing: 7px;
+}
+body{
+    background-image: url(/images/564835.jpg);
+    background-repeat:repeat-x;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: scroll;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 5 new types and new attributes</title>
+</head>
+<body>
+    <form action="demo2.html" method="get">
+        <table>
+            <tr>
+                <td>Emp id:</td>
+                <td><input type="text" name="id" value="101" readonly="readonly"></td>
+            </tr>
+            <tr>
+                <td>First name:</td>
+                <td><input type="text" name="fname" pattern="(^[a-zA-Z]{1,1}+[a-z]{1,29})$" autofocus="autofocus" placeholder="first name" autocomplete="on"></td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td><input type="email" name="email" placeholder="email" multiple="multiple" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td>Enter your age</td>
+                <td><input style="width: 154; margin-left: 2px;" type="number" min="1" max="100" name="age" required="required" placeholder="age"></td>
+            </tr>
+            <tr>
+                <td>Select color:</td>
+                <td><input type="color" name="color"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="bdate" required="required"></td>
+            </tr>
+            <tr>
+                <td>Batch time</td>
+                <td><input type="time" name="time" required="required"></td>
+            </tr>
+            <tr>
+                <td>Site feedback</td>
+                <td><input type="range" name="feedback" min="1" max="5">5</td>
+            </tr>
+            <tr>
+                <td>select file</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td>Submit</td>
+                <td><input type="image" src="" height="50px" width="80px"></td>
+            </tr>
+            <tr>
+                <td><input type="search"></td>
+            </tr>
+            
+        </table>
+    </form>
+</body>
+</html>
