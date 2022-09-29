@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        #img1{
+            margin-left: 110px;
+           // position: absolute;
+            //z-index: 1;
+            position: relative;
+        }
+        #img2{
+            margin-left: 110px;
+           // position: absolute;
+            position: relative;
+        }
+        #img3{
+            margin-left: 110px;
+            /* position: absolute;
+            opacity: 0.6;
+            z-index: -1; */
+            position: relative;
+        }
+        </style>
+</head>
+<body>
+    <img src="images/564835.jpg" alt="" id="img1">
+    <img src="images/593284.jpg" alt="" id="img2">
+    <img src="images/731382.png" alt="" id="img3">
+
+    <div style="border: 2px solid green; position: fixed; right: 0;bottom: 0;">
+        <p>Fixed position</p>
+    </div>
+
+    
+    <div style="border: 2px solid green; height: 200px; width: 200px;">
+        <p>main div</p>
+        <div style="border: 2px solid green; position: fixed; left: 150px;">
+            <p>child div</p>
+        </div>
+    </div>
+</body>
+</html>
