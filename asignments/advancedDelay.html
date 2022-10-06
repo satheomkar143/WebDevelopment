@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-div {
+            margin: auto;
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            box-shadow:  5px 5px  rgba(0, 0, 0, 0.5) ;
+            background-color: white;
+            cursor: pointer;
+        }
+        #p-bottom{
+            position: relative;
+            margin-top: 550px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            background-color: beige;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            border-radius: 80px;
+            position: absolute;
+            margin-top: 225px;
+            margin-left: 225px;
+        }
+        .box p{
+            font-size: 20px;
+            position: relative;
+            margin-top: 43%;
+            margin-left: 23%;
+        }
+        #d1{
+            background-color: blue;
+            z-index: 1;
+        }
+        #d2{
+            background-color: red;
+        }
+        #d3{
+            background-color: green;
+        }
+
+        #main-div:hover #d1{
+            margin: 0;
+        }
+        #main-div:hover #d2{
+            margin-top: 0px;
+            margin-left: 450px;
+            border-radius: 0;
+            background-color: orange;
+        }
+        #main-div:hover #d3{
+            z-index: 1;
+            margin-top: 450px;
+            margin-left: 450px;
+        }
+
+        .box{
+            transition: margin 3s, border-radius 3s, background-color 3s;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <div class="box" id="d1">
+            <p>Normal</p>
+        </div>
+        <div class="box" id="d2">
+            <p>Example 2</p>
+        </div>
+        <div class="box" id="d3">
+            <p>Example 3</p>
+        </div>
+        <p id="p-bottom">hover on me!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    #main-div {
+        margin: auto;
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+        box-shadow:  5px 5px  rgba(0, 0, 0, 0.5) ;
+        background-color: white;
+    }
+    
+    #p-bottom{
+        margin: 0;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        background-color: beige;
+    }
+    p{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    div{
+        margin-top: 15px;
+        margin-left: 15px;
+        width: 60px;
+        height: 60px;
+        border: 1px solid black;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: margin-left 4s, transform 4s, border-radius 4s ;
+        cursor: pointer;
+    }
+
+    div:hover .box{
+        margin-left: 520px;
+        transform: rotate(720deg);
+        border-radius: 30px;
+        
+    }
+    #d1{
+        transition-timing-function: ease;
+    }
+    #d2{
+        transition-timing-function: ease-in;
+    }
+    #d3{
+        transition-timing-function: ease-out;
+    }
+    #d4{
+        transition-timing-function: ease-in-out;
+    }
+    #d5{
+        transition-timing-function: linear;
+    }
+    #d6{
+        transition-timing-function: cubic-bezier(1, 0.835, 0, 0.945);
+    }
+    #d7{
+        transition-timing-function: cubic-bezier(1.000, -0.530, 0.405, 1.425);;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <div class="box" id="d1" style="border: 1px solid red;">
+            <p>Ease</p>
+        </div>
+        <div class="box" id="d2" style="border: 1px solid green;">
+            <p>Ease In</p>
+        </div>
+        <div class="box" id="d3" style="border: 1px solid blue;">
+            <p>Ease Out</p>
+        </div>
+        <div class="box" id="d4" style="border: 1px solid yellow;">
+            <p>Ease In Out</p>
+        </div>
+        <div class="box" id="d5" style="border: 1px solid palevioletred;">
+            <p>Linear</p>
+        </div>
+        <div class="box" id="d6" style="border: 1px solid cyan;">
+            <p>Custom</p>
+        </div>
+        <div class="box" id="d7" style="border: 1px dotted black;">
+            <p>Awesome!</p>
+        </div>
+        <p id="p-bottom">hover on me!</p>
+    </div>
+    
+</body>
+</html>

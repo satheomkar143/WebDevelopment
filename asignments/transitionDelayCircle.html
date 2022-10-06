@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main-div {
+            margin: auto;
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            box-shadow:  5px 5px  rgba(0, 0, 0, 0.5) ;
+            background-color: white;
+            cursor: pointer;
+        }
+        #p-bottom{
+            position: relative;;
+            bottom: 30px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            background-color: beige;
+        }
+        #big-circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            margin:40% auto; 
+            background-color: red;
+        }
+        .small-circle{
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            border-radius: 10px;
+            position: absolute;
+            margin:-300px 290px; 
+            
+        }
+
+        #main-div:hover #big-circle{
+            background-color: white;
+        }
+        #main-div:hover #d1{
+            margin-left: 0;
+            margin-top: -580px;
+        }
+        #main-div:hover #d2{
+            transition-delay: 150ms;
+            margin-left: 290px;
+            margin-top: -580px;
+        }
+        #main-div:hover #d3{
+            transition-delay: 170ms;
+            margin-left: 580px;
+            margin-top: -580px;
+        }
+        #main-div:hover #d4{
+            transition-delay: 230ms;
+            margin-left: 0;
+            margin-top: -300px;
+        }
+        #main-div:hover #d5{
+            transition-delay: 190ms;
+            margin-left: 580px;
+            margin-top: -300px;
+            z-index: 1;
+        }
+        #main-div:hover #d6{
+            transition-delay: 280ms;
+            margin: 0;
+            z-index: 1;
+        }
+        #main-div:hover #d7{
+            transition-delay: 260ms;
+            margin-left: 290px;
+            margin-top: 0;
+            z-index: 1;
+        }
+        #main-div:hover #d8{
+            transition-delay: 210ms;
+            margin-left: 580px;
+            margin-top: 0;
+            z-index: 1;
+        }
+
+        .small-circle{
+            transition: margin 3s;
+        }
+        #big-circle{
+            transition:  background-color 3s;    
+        }
+    </style>
+</head>
+<body>
+    <div id="main-div">
+        <div id="big-circle"></div>
+        <div id="d1" class="small-circle"></div>
+        <div id="d2" class="small-circle"></div>
+        <div id="d3" class="small-circle"></div>
+        <div id="d4" class="small-circle"></div>
+        <div id="d5" class="small-circle"></div>
+        <div id="d6" class="small-circle"></div>
+        <div id="d7" class="small-circle"></div>
+        <div id="d8" class="small-circle"></div>
+
+        <p id="p-bottom">hover on me!</p>
+    </div>
+</body>
+</html>
