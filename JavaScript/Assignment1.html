@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var i,j,k;
+
+        // 54321   one
+        // 4321
+        // 321
+        // 21
+        // 1
+
+        document.write("<div style='width:200px; margin:auto;'>");
+
+
+        for(i=5;i>0;i--){
+            for(k=0,j=i-k;j>0;j--,k++){
+                document.write(j+" ");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>");
+        // 5     two
+        // 45
+        // 345
+        // 2345
+        // 12345
+
+        for(i=0;i<5;i++){
+            for(k=5,j=k-i;j<=k;j++){
+                document.write(j+" ");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>");
+        // 1      three
+        // 21
+        // 321
+        // 4321
+        // 54321
+
+        for(i=1;i<=5;i++){
+            for(j=i;j>0;j--){
+                document.write(j+" ");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>");
+        // 1  four
+        // 22
+        // 333
+        // 4444
+        // 55555
+
+        for(i=1;i<=5;i++){
+            for(j=0;j<i;j++){
+                document.write(i+" ");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>");
+        // 11111    five
+        // 2222
+        // 333
+        // 44
+        // 5
+
+        for(i=1;i<=5;i++){
+            for(j=5;j>=i;j--){
+                document.write(i+" ");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>");
+        // 13579    six
+        // 3579
+        // 579
+        // 79
+        // 9
+
+        for(i=1;i<=9;i+=2){
+            for(j=i;j<=9;j+=2){
+                document.write(j+" ");
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>");
+        // 55555   seven
+        // 45555
+        // 34555
+        // 23455
+        // 12345
+
+
+        for(k=4,i=0;i<5;i++,k--){
+            for(j=1;j<=5;j++){
+                if(j<=i){
+                    document.write((j+k)+" ");
+                }
+                else{
+                    document.write("5 ");
+                }
+            }
+            document.write("<br>");
+        }
+
+
+        document.write("<br><br>");
+        // 1      eight
+        // 2 6
+        // 3 7 10
+        // 4 8 11 13
+        // 5 9 12 14 15
+
+        for(i=1;i<=5;i++){
+            var add=4;
+            for(k=i,j=1;j<=i;j++,k+=add--){
+                document.write(k+' ');
+            }
+            document.write("<br>");
+        }
+
+        document.write("<br><br>");
+        // 1     nine
+        // 10
+        // 101
+        // 1010
+        // 10101
+
+        for(i=1;i<=5;i++){
+            for(j=1;j<=i;j++){
+                if(j%2===0){
+                    document.write('0 ');
+                }else{
+                    document.write('1 ');
+                }
+            }
+            document.write("<br>");
+        }
+
+        document.write("</div>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

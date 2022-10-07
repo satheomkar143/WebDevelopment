@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>marksheet</title>
+
+    <script>
+        var rno = prompt("Enter roll number: ");
+        var name = prompt("Enter name: ");
+        var m1 = parseInt(prompt("Enter mark of m1"));
+        var m2 = parseInt(prompt("Enter mark of m2"));
+        var m3 = parseInt(prompt("Enter mark of m3"));
+        var total = m1 + m2 + m3;
+        var per = total/3;
+       // alert(per);
+
+        var grade = "";
+        
+        if(per>=70){
+            grade = "distinction";
+        }
+        else if(per>=60 & per < 70){
+            grade = "first class";
+        }
+        else if(per>=50 & per < 60){
+            grade = "second class";
+        }
+        else if(per>=40 & per < 50){
+            grade = "pass";
+        }
+        else{
+            grade = "fail";
+        }
+
+        document.write("<table cellpadding=5 width = '300px' border= 2px align=center> <caption style='color:red;'>Student Marksheet </caption>  <tr> <th>roll no</th> <th>name</th>  <th>m1</th> <th>m2</th> <th>m3</th> <th>total</th>  <th>percentage</th> <th>grade</th> </tr>"
+        )
+        document.write( "<tr><td>"+rno+"</td> <td>"+name+"</td> <td>"+m1+"</td> <td>"+m2+"</td> <td>"+m3+"</td> <td>"+total+"</td> <td>"+per.toFixed(2)+"</td> <td>"+grade+"</td> </tr> </table>"
+        )
+
+        </script>
+    </head>
+    <body></body>
+</html>
