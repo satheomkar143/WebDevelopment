@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Style</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main-div {
+        max-width: 100%;
+        height: 100vh;
+        background-color: aqua;
+      }
+      #btn-div {
+        display: flex;
+      }
+      .btn {
+        position: relative;
+        margin-left: 40%;
+        margin-top: 25px;
+        padding: 10px 20px;
+        font-size: 30px;
+      }
+      #decrease-font {
+        width: 150px;
+        margin-right: 0;
+      }
+      #increase-font {
+        width: 150px;
+        margin-left: 50px;
+      }
+      #text {
+        text-decoration: dashed;
+        font-size: 40px;
+        position: fixed;
+        top: 200px;
+        font-style: italic;
+        left: 45%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div id="btn-div">
+        <button id="decrease-font" class="btn">font -</button>
+        <button id="increase-font" class="btn">font +</button>
+      </div>
+      <div id="text" style="color: red">
+        <h1>omkar</h1>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var fontDecrease = document.getElementById("decrease-font");
+    var fontIncrease = document.getElementById("increase-font");
+    var text = document.getElementById("text");
+
+    console.log(fontDecrease);
+    console.log(fontIncrease);
+    console.log(text.innerText);
+
+    // inline style
+
+    console.log(text.style.color);
+    //text.style.color = "blue";
+
+    //css file style
+
+    console.log(window.getComputedStyle(text).color);
+    var size = window.getComputedStyle(text).fontSize;
+    console.log(size, typeof size);
+
+    size = parseInt(size.substr(0, size.length - 2));
+    console.log(size, typeof size);
+
+    function increaseFont() {
+      size+=5;
+      text.style.fontSize = size + "px";
+      text.style.color = "blue";
+    }
+    function decreaseFont() {
+      size-=5;
+      text.style.fontSize = size + "px";
+      text.style.color = "green";
+    }
+
+    fontDecrease.onclick = decreaseFont;
+
+    fontIncrease.addEventListener("click", increaseFont);
+  </script>
+</html>

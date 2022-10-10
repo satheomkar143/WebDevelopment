@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      height: 100vh;
+      width: 100%;
+      background: blueviolet;
+    }
+    #btn{
+      position: fixed;
+      top: 50%;
+      left: 45%;
+      padding: 10px;
+      font-size: 20px;
+    }
+    h1{
+      position: absolute;
+      top: 30%;
+      padding-left: 30%;
+    }
+    .small{
+        font-size:  45px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .big{
+      font-size: 70px;
+      font-style: italic;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1 class="small">I have super-power</h1>
+      <button id="btn"><h2>click Me</h2></button>
+    </div>
+  </header>
+</body>
+
+<script>
+  var btn = document.getElementById("btn");
+  var head = document.querySelector("header div h1");
+  console.log(head.innerHTML);
+
+  function change(){
+    if(head.classList.contains("small")){
+      head.classList.add("big");
+    head.classList.remove("small");
+    }else{
+      head.classList.add("small");
+    head.classList.remove("big");
+    }
+
+  }
+
+  btn.addEventListener("click", change);
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form event</title>
+  <style>
+    .main-div{
+      width: 500px;
+      height: 500px;
+     // background: red;
+      margin: 50px auto;
+    }
+    input{
+      position: relative;
+      margin: 10px auto;
+      height: 30px;
+      width: 350px;
+      display: flex;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-div">
+    <form id="login-form">
+      <input id="username" type="text" name="username" placeholder="username" required>
+      <input id="password" type="password" name="password" placeholder="password">
+      <input id="btn-submit" type="submit" value="login">
+    </form>
+  </div>
+</body>
+
+<script>
+  
+  username = document.getElementById("username");
+  console.log(username);
+
+  // it cannot update if same value insert 
+
+  // username.addEventListener("change", function() {
+  //   console.log("value changed" );
+  // });
+
+  // username.addEventListener("input", function() {
+  //   console.log("value changed" );
+  // });
+
+
+  username.addEventListener("input", function(event) {
+    var currentValue = event.target.value;
+    currentValue = currentValue.toUpperCase();
+    console.log(currentValue);
+    username.value = currentValue;
+  });
+
+  // ---------focus-----
+
+  username.addEventListener("focus", function(){
+    console.log("element focus");
+  });
+
+  // --------------------blur--------
+
+  username.addEventListener("blur", function(){
+    console.log("element lost focus");
+  });
+
+  //------------------------submit---------
+
+  var loginForm =document.getElementById("login-form");
+ // console.log(loginForm);
+
+  loginForm.addEventListener("submit",function(event){
+    alert("form submitted");
+    event.preventDefault();
+  });
+
+
+
+</script>
+</html>

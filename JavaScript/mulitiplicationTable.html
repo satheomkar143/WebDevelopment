@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <script>
+      // var num = parseInt(prompt("Enter number"));
+      var i, mul, sno, eno;
 
-       // var num = parseInt(prompt("Enter number"));
-        var i, mul;
+      // document.write("<table cellpadding=3 border=2 width=300px align=center><tr>");
+      // for(i=1;i<=10;i++){
+      //     mul = num*i;
+      //     document.write(" <td>"+num+"*"+i+"="+mul+"</td>");
+      // }
+      // document.write("</tr></table>");
 
-        // document.write("<table cellpadding=3 border=2 width=300px align=center><tr>");
-        // for(i=1;i<=10;i++){
-        //     mul = num*i;
-        //     document.write(" <td>"+num+"*"+i+"="+mul+"</td>");
-        // }
-        // document.write("</tr></table>");
+      sno = parseInt(prompt("Enter start value: "));
+      eno = parseInt(prompt("Enter last value: "));
+      document.write(
+        "<table cellpadding=3 border=2 width=300px align=center><tr>"
+      );
+      for (num = sno; num <= eno; num++) {
+        if (num % 2 == 0) {
+          document.write("<tr style='background-color:black;'>");
+          for (i = 1; i <= 10; i++) {
+            mul = num * i;
 
-        document.write("<table cellpadding=3 border=2 width=300px align=center><tr>");
-        for(num=1;num<=10;num++){
-            for(i=1;i<=10;i++){
-            mul = num*i;
-            document.write(" <td>"+num+"*"+i+"="+mul+"</td>");
-            }
-            document.write("</tr><br>");
+            document.write(
+              " <td style='color:white'>" + num + "*" + i + "=" + mul + "</td>"
+            );
+          }
+          document.write("</tr><br>");
+        } else {
+          for (i = 1; i <= 10; i++) {
+            mul = num * i;
+
+            document.write(" <td>" + num + "*" + i + "=" + mul + "</td>");
+          }
+          document.write("</tr><br>");
         }
-        document.write("</table>");
-
-
+      }
+      document.write("</table>");
     </script>
-
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #top-btn {
+        width: 300px;
+        height: 60px;
+        font-size: 30px;
+        font-weight: bolder;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin: 50px 40%;
+      }
+      div {
+        background-color: beige;
+        width: 50%;
+        height: 50vh;
+        margin: 10px auto;
+      }
+      li {
+        background-color: aliceblue;
+        margin: 10px 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        text-align: center;
+
+        padding: 5px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <button id="top-btn">Add List Item</button>
+      <div>
+        <ul id="todo-list">
+          <li>List Item 1</li>
+          <li>List Item 2</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    var newListItem = document.createElement("li");
+    newListItem.appendChild(document.createTextNode("List Item 3"));
+    newListItem.id = "list-3";
+    console.log(newListItem);
+
+    var list = document.getElementById("todo-list");
+    var btn = document.getElementById("top-btn");
+    var count = list.childElementCount;
+
+    btn.addEventListener("click", function(){
+      newListItem = document.createElement("li");
+      count += 1;
+      text = document.createTextNode("List Item "+count);
+      newListItem.appendChild(text);
+      alert("List Item "+count+" created successfully");
+      list.appendChild(newListItem);
+      console.log(newListItem);
+    })
+
+    // var firstItem = doc.......;
+    // firstItem = list.firstElementChild;
+    // list.insertBefore(newListItem, firstItem);
+
+
+
+  </script>
+</html>

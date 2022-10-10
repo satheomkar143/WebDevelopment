@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event handler</title>
+  
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      height: 100vh;
+      width: 100%;
+      background: blueviolet;
+    }
+    #btn{
+      position: fixed;
+      top: 50%;
+      left: 45%;
+      padding: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <button id="btn"><h2>click Me</h2></button>
+    </div>
+  </header>
+</body>
+
+<script>
+  var btn = document.getElementById("btn");
+  var mainDiv = document.querySelector(" header div");
+
+      // ----------using event property --------
+
+
+  btn.onclick = function(){
+    alert("Click me! successful");
+  }
+
+    // ---------using addEventListener---------
+
+    function changeBack(){
+     var rand1 = Math.floor(Math.random()*255) ;
+      var rand2 = Math.floor(Math.random()*255);
+      var rand3 = Math.floor(Math.random()*255);
+
+      var rgba = 'rgb(' + rand1 + ', ' + rand2 + ', ' + rand3 + ')';
+      alert(rgba);
+     // alert(typeof(rand1))
+     // mainDiv.style.backgroundColor = "yellow";
+     mainDiv.style.backgroundColor = rgba;
+    }
+
+    btn.addEventListener("click", changeBack);
+</script>
+</html>

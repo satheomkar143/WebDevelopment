@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>countdown</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #bg-image {
+        //     background-size: cover;
+        width: 1345px;
+        height: 100vh;
+      }
+      #countdown {
+        font-size: 100px;
+        position: fixed;
+        top:100px;
+        left: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img id="bg-image" src="img/bg1.jpg" alt="" />
+      <h1 id="countdown">10</h1>
+    </div>
+  </body>
+
+  <script>
+    console.log("hiiiii");
+    var countdownElement = document.getElementById("countdown");
+
+    console.log(countdownElement);
+    console.log(countdownElement.innerHTML);
+    countdown = countdownElement.innerHTML;
+    console.log(countdown);
+
+    var imageElement = document.getElementById("bg-image");
+    console.log(imageElement);
+    image = imageElement.src;
+    console.log(image);
+
+    var size = countdownElement.style.fontSize;
+    console.log(size);
+
+    setInterval(function () {
+      var bg_img;
+     
+      if (countdown > 0) {
+        countdownElement.style.fontSize= countdown*50+"px";
+        countdown -= 1;
+        countdownElement.innerHTML = countdown ;
+        if(countdown%2==0){
+         bg_img= "img/bg1.jpg";
+        }else{
+          bg_img= "img/bg2.jpg";
+        }
+        imageElement.src=bg_img;
+        
+      } else {
+        return 0;
+      }
+      console.log(countdown);
+    }, 1000);
+  </script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+      .main-div {
+        height: 50vh;
+        margin: 150px auto;
+        width: 80%;
+        background-color: rgb(33, 248, 22);
+        display: flex;
+        justify-content: space-between;
+      }
+      .main-div div {
+        position: relative;
+        margin: auto 10px;
+        width: 100px;
+        height: 100px;
+        font-size: 20px;
+        text-align: center;
+        font-style: italic;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+        border: 1px solid red;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-div">
+      <div id="div-A"><h1>A</h1></div>
+      <div id="div-S"><h1>S</h1></div>
+      <div id="div-D"><h1>D</h1></div>
+      <div id="div-F"><h1>F</h1></div>
+      <div id="div-G"><h1>G</h1></div>
+      <div id="div-H"><h1>H</h1></div>
+      <div id="div-J"><h1>J</h1></div>
+      <div id="div-K"><h1>K</h1></div>
+      <div id="div-L"><h1>L</h1></div>
+    </div>
+  </body>
+
+  <script>
+    var mainDiv = document.getElementsByClassName("main-div");
+    console.log(mainDiv);
+    var divA = document.getElementById("div-A");
+    var divS = document.getElementById("div-S");
+    var divD = document.getElementById("div-D");
+    var divF = document.getElementById("div-F");
+    var divG = document.getElementById("div-G");
+    var divH = document.getElementById("div-H");
+    var divJ = document.getElementById("div-J");
+    var divK = document.getElementById("div-K");
+    var divL = document.getElementById("div-L");
+
+    console.log(window.getComputedStyle(divA).boxShadow);
+
+    // var audio; = new Audio('~/Content/Sound/Down.mp3');
+    // audio.loop = false;
+    // audio.play();
+
+    document.body.addEventListener("keydown", function (e) {
+      key = e.keyCode;
+      console.log(key + " keydown");
+      if (key === 65) {
+        // window.getComputedStyle(divA).boxShadow = "5px 5px yellow";
+        divA.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/boom.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 83) {
+        divS.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/clap.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 68) {
+        divD.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/tom.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 70) {
+        divF.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/hihat.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 71) {
+        divG.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/kick.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 72) {
+        divH.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/openhat.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 74) {
+        divJ.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/ride.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 75) {
+        divK.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/snare.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      if (key === 76) {
+        divL.style.boxShadow = "0 0 35px red";
+        audio = new Audio("audio/tink.wav");
+        audio.play();
+        setTimeout("location.reload(true);", 1000);
+      }
+      
+    });
+  </script>
+</html>

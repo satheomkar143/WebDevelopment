@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chess board</title>
+    <style>
+      table {
+        width: 500px;
+        height: 500px;
+        border: 3px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var i, j;
+
+      document.write("<table cellpadding=3 border=2 width=300px align=center>")
+      for (row = 0; row < 8; row++) {
+        document.write("<tr>");
+        for (j = 0; j < 8; j++) {
+          if (row % 2 == 0) {
+            if (j % 2 == 0) {
+              document.write("<td style='background-color:black;'></td>");
+            } else {
+              document.write("<td></td>");
+            }
+          }else{
+            if (j % 2 != 0) {
+              document.write("<td style='background-color:black;'></td>");
+            } else {
+              document.write("<td></td>");
+            }
+          }
+        }
+        document.write("</tr>");
+      }
+      document.write("</tr>");
+    </script>
+  </body>
+</html>
