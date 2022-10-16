@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    var arr=[10];
+    var i, j, search;
+    for(i=0;i<5;i++){
+      arr[i]=parseInt(prompt("enter number: "));
+    }
+    console.log("entered element");
+    console.log(arr);
+
+    search = parseInt(prompt("enter number to search: "));
+
+    // var result = arr.indexOf(search);
+
+    // if(result==-1){
+    //   console.log("search element not found");
+    // }else{
+    //   console.log(`search element found at index ${result}`);
+    // }
+    var result = arr.includes(search);
+
+    if(result==false){
+      console.log("search element not found");
+    }else{
+      console.log(`search element found in array `);
+    }
+  </script>
+
+
+
+</head>
+<body>
+  
+</body>
+</html>

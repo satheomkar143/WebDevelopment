@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    var arr = [10, 20, "omkar", 30, 40];
+    document.write("original Array: "+ arr);
+    
+    // push()   =   add element at end
+    arr.push(100);
+    document.write("<br><br>after push 100 in array : "+arr);
+
+    // unshift()    =    add element at first
+    arr.unshift(200);
+    document.write("<br><br>after unshift 200 in array : "+arr);
+
+    //pop()   =     remove element at end
+    arr.pop();
+    document.write("<br><br>after pop in array : "+arr);
+
+    //shift()   =      remove element at first
+    arr.shift();
+    document.write("<br><br>after shift in array : "+arr);
+
+    //splice() = remove/ insert/ update element 
+
+    //remove
+    arr.splice(2,1);
+    document.write("<br><br>after splice(remove index 2) in array : "+arr);
+
+    //insert
+    arr.splice(2,0,'omkar','sathe');
+    document.write("<br><br>after splice(insert array ele) in array : "+arr);
+
+    //update
+    arr.splice(4,0,143);
+    document.write("<br><br>after splice(update array ele) in array : "+arr);
+
+    //slice   =  copy element of array in another array
+    var arr2 = arr.slice();
+    document.write("<br><br>array 2 is : "+arr2);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

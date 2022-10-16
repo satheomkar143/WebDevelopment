@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+      //get element by id
+
+      // function fun(){
+      //   var c = document.getElementById("p1");
+      //   alert(c.innerHTML);
+      // }
+
+
+      //get elements by tag name
+
+      // function fun() {
+      //   var c = document.getElementsByTagName("p");
+      //   alert(c);
+      //   alert(c[0].innerHTML);
+      //   alert(c[1].innerHTML);
+
+      //   var txt = "";
+      //   for (var i = 0; i < c.length; i++) {
+      //     txt += c[i].innerHTML;
+      //   }
+      //   document.getElementById("p3").innerHTML = txt;
+      // }
+
+      // get elements by class name
+
+      function fun(){
+
+        var c = document.getElementsByClassName("example");
+        c[0].style.border = "2px solid red";
+        c[0].style.fontSize= '30px';
+        c[0].style.color = "pink";
+
+      }
+
+      function over(){
+        var c = document.getElementsByClassName('ex');
+        c[0].style.height = '50px';
+        c[0].style.width= '500px';
+        c[0].style.fontSize= '30px';
+        c[0].style.color = "blue";
+        c[0].style.background = "yellow";
+        c[0].style.textAlign = "center";
+        c[0].style.margin = "100px auto";
+      }
+      function out() {
+        var c = document.getElementsByClassName('ex');
+        c[0].style= null;
+      }
+
+
+
+
+    </script>
+  </head>
+  <body>
+    <p id="p1">welcome to javascript</p>
+    <p id="p2">hello world</p>
+    <button onclick="fun()">click me</button>
+    <p id="p3"></p>
+
+
+    <div class="example">
+      <p>This is para one</p>
+    </div>
+    <div class="ex" onmouseover="over()" onmouseout="out()">
+      <p>This is para two</p>
+    </div>
+    <div class="example">
+      <p>This is para three</p>
+    </div>
+
+    <button onclick="fun()">click me</button>
+    <p id="p4"></p>
+  </body>
+</html>

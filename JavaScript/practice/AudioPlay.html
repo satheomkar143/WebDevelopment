@@ -65,6 +65,46 @@
     // audio.loop = false;
     // audio.play();
 
+    const defaultShadow = (e)=> {
+     switch (e) {
+      case 'A':
+      divA.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'S':
+      divS.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'D':
+      divD.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'F':
+      divF.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'G':
+      divG.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'H':
+      divH.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'J':
+      divJ.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'K':
+      divK.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     
+      case 'L':
+      divL.style.boxShadow = "5px 5px rgba(0, 0, 0, 0.6)";
+        break;
+     }
+    }
+
     document.body.addEventListener("keydown", function (e) {
       key = e.keyCode;
       console.log(key + " keydown");
@@ -73,56 +113,57 @@
         divA.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/boom.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'A'),500);
       }
       if (key === 83) {
         divS.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/clap.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'S'),500);
       }
       if (key === 68) {
         divD.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/tom.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'D'),500);
       }
       if (key === 70) {
         divF.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/hihat.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'F'),500);
       }
       if (key === 71) {
         divG.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/kick.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'G'),500);
       }
       if (key === 72) {
         divH.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/openhat.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'H'),500);
       }
       if (key === 74) {
         divJ.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/ride.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'J'),500);
       }
       if (key === 75) {
         divK.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/snare.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'K'),500);
       }
       if (key === 76) {
         divL.style.boxShadow = "0 0 35px red";
         audio = new Audio("audio/tink.wav");
         audio.play();
-        setTimeout("location.reload(true);", 1000);
+        setTimeout(defaultShadow.bind(null,'L'),500);
       }
+      //location.reload();
       
     });
   </script>

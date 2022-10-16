@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">click me </button>
+  <p id="p1"></p>
+  <p id="p2"></p>
+</body>
+<script>
+  var p= document.getElementById("btn");
+  p.addEventListener("mouseover",fun);
+  p.addEventListener("mouseout",fun1);
+
+  function fun(){
+    p1.innerHTML ="this is para one";
+    p2.innerHTML ="this is para two";
+  }
+  function fun1(){
+    p1.innerHTML='';
+    p2.innerHTML='';
+
+  }
+</script>
+</html>

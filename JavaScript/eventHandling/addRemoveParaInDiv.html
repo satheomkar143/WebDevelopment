@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: linear-gradient(to right, cyan, pink);
+      }
+      header {
+        background: linear-gradient(to right, yellow, rgb(213, 105, 114));
+        padding: 10px;
+        margin: 5px 30%;
+        display: flex;
+        border-radius: 15px;
+        justify-content: center;
+      }
+      button {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1em;
+        font-weight: bolder;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+      }
+      #main-div {
+        width: 400px;
+        height: 0px;
+        background-color: rgb(198, 77, 243);
+        border-radius: 20px;
+        margin: 15px auto;
+      }
+      #main-div p {
+        font-size: 25px;
+        text-align: center;
+        font-style: italic;
+        font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="add">Add Para</button>
+      <button id="remove">Remove Para</button>
+    </header>
+    <div id="main-div"></div>
+  </body>
+
+  <script>
+    var d = document.getElementById("main-div");
+    var addButton = document.getElementById("add");
+    var removeButton = document.getElementById("remove");
+    var count = d.childElementCount;
+    var divHeight = window.getComputedStyle(d).height;
+    divHeight = parseInt(divHeight.substr(0, divHeight.length - 2));
+
+    function addPara() {
+      count += 1;
+      divHeight += 60;
+      d.style.height = divHeight + "px";
+      var para = document.createElement("p");
+      para.innerHTML = "new paragraph " + count;
+      var text = para.innerHTML;
+      d.appendChild(para);
+    }
+    function removePara() {
+      if (count == 0) {
+        return;
+      } else {
+        divHeight -= 60;
+        d.style.height = divHeight + "px";
+        count -= 1;
+        d.removeChild(d.lastChild);
+      }
+    }
+
+    addButton.addEventListener("click", addPara);
+
+    document.body.addEventListener("keydown", function (e) {
+      key = e.keyCode;
+      //console.log(key + " keydown");
+      if(key==13){
+        addPara();
+      }
+      if(key==46){
+        removePara();
+      }
+
+    });
+    removeButton.addEventListener("click", removePara);
+  </script>
+</html>

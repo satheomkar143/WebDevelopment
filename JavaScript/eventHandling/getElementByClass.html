@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #btn{
+      width: 200px;
+      height: 50px;
+      background: cyan;
+      display: flex;
+      margin: 10px auto;
+    }
+    #btn button{
+      margin: 5px auto;
+      color: blue;
+    }
+  </style>
+
+  <script>
+    function over(){
+        var c = document.getElementsByClassName('ex');
+
+        for(var i=0; i<c.length;i++){
+        c[i].style.width= '500px';
+        c[i].style.fontSize= '30px';
+        c[i].style.height = '50px';
+        c[i].style.color = "blue";
+        c[i].style.background = "yellow";
+        c[i].style.textAlign = "center";
+        c[i].style.margin = "100px auto";
+        }
+      }
+
+      function out() {
+        var c = document.getElementsByClassName('ex');
+        for(var i = 0; i < c.length; i++) {
+        c[i].style= null;
+        }
+      }
+
+  </script>
+</head>
+<body>
+
+  <div id="btn">
+    <button onclick="over()">add style</button>
+    <button onclick="out()">remove style</button>
+  </div>
+  
+  <div class="example">
+    <p>This is para one</p>
+  </div>
+  <div class="ex" onclick="over()" >
+    <p>This is para two</p>
+  </div>
+  <div class="example">
+    <p>This is para one</p>
+  </div>
+  <div class="ex" onclick="over()" >
+    <p>This is para two</p>
+  </div>
+  <div class="example">
+    <p>This is para one</p>
+  </div>
+  <div class="ex" onclick="over()">
+    <p>This is para two</p>
+  </div>
+  <div class="example">
+    <p>This is para one</p>
+  </div>
+  <div class="ex" onclick="over()" >
+    <p>This is para two</p>
+  </div>
+  <div class="example">
+    <p>This is para three</p>
+  </div>
+
+ 
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function clickFun(){
+      alert("clicked event call");
+    }
+
+    function overFun(){
+      alert("mouseover event call");
+    }
+
+    function outFun(){
+      alert("mouseout event call");
+    }
+
+    function leaveFun(){
+      alert("leave event call");
+    }
+
+    function dFun(){
+      alert("double click event call");
+    }
+    function enterFun(){
+      alert("enter event call");
+    }
+
+    function press(){
+      alert("press event call");
+    }
+  </script>
+</head>
+<body>
+  <input type="text" onkeypress="press()" placeholder="onkeypress"> <br><br>
+  <input type="text" onfocus="press()" placeholder="onfocus"> <br><br>
+  <input type="text" onblur="press()" placeholder="onblur"> <br><br>
+  <button onclick="clickFun()">click event button</button>
+  <button onmouseover="overFun()"> mouseover button</button>
+  <button onmouseout="outFun()">mouseout button</button>
+  <button onmouseleave="leaveFun()"> mouseleave button</button>
+  <button ondblclick="dFun()">dblclick button</button>
+  <button onmouseenter="enterFun()">mouseenter button</button>
+
+</body>
+</html>
