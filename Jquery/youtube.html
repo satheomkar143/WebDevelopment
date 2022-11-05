@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="youtube.css" />
+    <title>youtube</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="navbar">
+        <img id="logo" src="img/youtube-logo.png" alt="" />
+        <div id="search">
+          <input type="text" />
+          <button><i class="fa-brands fa-searchengin"></i></button>
+        </div>
+        <img id="userlogo" src="img/userid.png" alt="" />
+      </div>
+      <div class="body-container">
+        <section id="left-side">
+          <div class="video">
+            <video controls="controls" autoplay="autoplay" id="vid"></video>
+            <h1 id="video-name">The Batman - (Creed III Style)</h1>
+            <div class="bottom-nav">
+              <img id="subscribe" src="img/subscribe.png" alt="" />
+              <i class="fa-solid fa-heart"></i>
+              <div class="likeBtn">
+                <div>
+                  <i class="fa-solid fa-thumbs-up" id="like"></i>
+                  <span>500</span>
+                  <i class="fa-solid fa-thumbs-up" id="dislike"></i>
+                </div>
+                <div><i class="fa-solid fa-share"></i></div>
+                <div><i class="fa-solid fa-ellipsis"></i></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="video-list video-list-table">
+          <!-- <table cellpadding="10" align="center" cellspacing="20" id="video-list-table"> 
+            <tr>
+              <td>1</td>
+              <td id="0"><img src="img/youtube-logo.png" alt=""></td>
+              <td id="name0">hgsdfjhdskfdskhf</td>
+            </tr>            
+          </table> -->
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(function(){
+
+      var videos=new Array(
+        "The Batman - (Creed III Style).mp4",
+        "OPERATION FORTUNE Official Trailer 2022 - Jason Statham - Aubrey Plaza.mp4",
+        "Black Adam - Official Trailer 2.mp4"
+      )
+
+      // $(".dataDiv").click(function(){
+			// var id = $(this).attr('id');
+      // console.log("id="+id);
+
+      // $("#vid").attr('src',`video/${videos[id]}`);
+      // $('#video-name').html(videos[id]);
+
+      // })
+
+      $(function show(){
+			var id = $(this).attr('id');
+      console.log("id="+id);
+
+      $("#vid").attr('src',`video/${videos[id]}`);
+      $('#video-name').html(videos[id]);
+
+      })
+
+    })
+  </script>
+
+  <script src="script.js"></script>
+
+
+</html>

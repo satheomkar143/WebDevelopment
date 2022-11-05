@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="start()">start clock</button>
+    <button onclick="stop()">stop clock</button><br />
+    <h1 id="head"></h1>
+
+    <script>
+      var interval;
+      var sec = 00,
+        min = 00,
+        hour = 00;
+      console.log(typeof min);
+      function start() {
+        interval = setInterval(function () {
+          var time = hour + " hr:" + min + " min:" + sec + " sec";
+          head.innerHTML = time;
+          sec++;
+
+          if (sec == 5) {
+            sec = 0;
+            min++;
+          }
+          if (min == 5) {
+            hour++;
+            min = 0;
+          }
+          if (hour == 2) {
+            hour = min = sec = 0;
+          }
+        }, 1000);
+      }
+
+      function stop() {
+        console.log("stopping");
+        hour = min = sec = 0;
+        clearInterval(interval);
+      }
+    </script>
+  </body>
+</html>

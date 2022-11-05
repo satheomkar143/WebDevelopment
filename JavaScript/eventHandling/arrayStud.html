@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var rno = [10];
+      var sname = [10];
+      var age = [10];
+      var marks = [10];
+
+      var i = 0;
+      function add_info() {
+        rno[i] = parseInt(prompt("Enter roll number"));
+        sname[i] = prompt("Enter name");
+        age[i] = parseInt(prompt("Enter age"));
+        marks[i] = parseInt(prompt("Enter mark"));
+        i++;
+      }
+
+      var heading = ["roll no", "name", "age", "marks"];
+
+      function show_info() {
+        document.write("<table border=2 width='300px' cellpadding=5><tr>");
+
+        for (var j = 0; j < heading.length; j++) {
+          document.write("<th>" + heading[j] + "</th>");
+        }
+        document.write("</tr>");
+
+        for (var j = 0; j < i; j++) {
+          document.write(
+            "<tr><td>" +
+              rno[j] +
+              "</td><td>" +
+              sname[j] +
+              "</td><td>" +
+              age[j] +
+              "</td><td>" +
+              marks[j] +
+              "</td></tr>"
+          );
+        }
+        document.write("</table>");
+      }
+
+      // function create_table(){
+      //   var table= document.createElement("table");
+      //   table.setAttribute('border','1');
+      //   table.setAttribute('width','100%');
+      //   var row = table.insertRow(0);
+
+      //   for(j=0 ;j<10;j++){
+      //     var text = document.createTextNode("cell1");
+      //     var cell = row.insertCell(j);
+      //     cell.setAttribute('align', 'center');
+      //     cell.appendChild(text);
+      //   }
+      //   document.getElementById('table_p').appendChild(table);
+      // }
+
+      function create_table() {
+        var table = document.createElement("table");
+        table.setAttribute("border", "1");
+        table.setAttribute("width", "100%");
+        var row = table.insertRow(0);
+
+        for (j = 0; j < heading.length; j++) {
+          var text = document.createTextNode(heading[j]);
+          var cell = row.insertCell(j);
+          cell.setAttribute("align", "center");
+          cell.appendChild(text);
+        }
+        for (k = 0; k < i; k++) {
+          var row = table.insertRow(k+1);
+            var text = document.createTextNode(rno[k]);
+            var cell = row.insertCell(0);
+            cell.setAttribute("align", "center");
+            cell.appendChild(text);
+
+            var text = document.createTextNode(sname[k]);
+            var cell = row.insertCell(1);
+            cell.setAttribute("align", "center");
+            cell.appendChild(text);
+
+            var text = document.createTextNode(age[k]);
+            var cell = row.insertCell(2);
+            cell.setAttribute("align", "center");
+            cell.appendChild(text);
+
+            var text = document.createTextNode(marks[k]);
+            var cell = row.insertCell(3);
+            cell.setAttribute("align", "center");
+            cell.appendChild(text);
+
+        }
+        document.getElementById('table_p').appendChild(table);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="add_info()">Add student information</button>
+    <button onclick="show_info()">show student information</button>
+    <button onclick="create_table()">create table</button>
+    <p id="table_p" style="width: 70%; padding: 25px auto"></p>
+  </body>
+</html>

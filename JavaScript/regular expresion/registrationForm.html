@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="success.html" name="f1" onsubmit="return submitForm()">
+      <table align="center" cellpadding="5">
+        <tr>
+          <td>user name</td>
+          <td>
+            <input
+              type="text"
+              name="uname"
+              onfocus="funName()"
+              onblur="funName1()"
+            />
+          </td>
+          <td id="correct"></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td id="err"></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="email" name="email" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td id="err1"></td>
+        </tr>
+        <tr>
+          <td>password</td>
+          <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+          <td><button  >submit</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+  <script>
+    var p2='(^[A-Z]{1,1})+([a-z]{1,10})$'
+    var u = f1.uname.value;
+
+    function funName() {
+      f.uname.style.border="2px solid black"
+
+      if(count===0){
+        err.innerHTML='please enter user name!'
+        err.style.color='red'
+      }
+    }
+    function funName1() {
+      // var p2 = "(^[A-Z]{1,1})+([a-z]{1,10})$";
+      // var u = f1.uname.value;
+      count = u.length;
+      // alert("ok")
+      if (u.match(p2)) {
+        err.innerHTML = "correct";
+        err.style.color = "green";
+        correct.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        f1.email.focus();
+      } else {
+        err.innerHTML = "wrong";
+        err.style.color = "red";
+        correct.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+      }
+    }
+
+    function submitForm(){
+      if(u===''){
+        err.innerHTML="please fill user name"
+        err.style.color='red'
+        return false
+      }
+      if(!u.match(p2)){
+        f1.uname.focus()
+        return false
+      }
+
+    }
+  </script>
+</html>

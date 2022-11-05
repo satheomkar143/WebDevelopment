@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h1 id="hed">welcome to spark</h1>
+    <button onclick="start()">start clock</button>
+    <button onclick="stop()">stop clock</button><br>
+    <h1 id="hed2"></h1>
+
+    <script>
+      function fun() {
+       // alert("i am alert of set interval");
+
+        var rand1 = Math.floor(Math.random() * 255);
+        var rand2 = Math.floor(Math.random() * 255);
+        var rand3 = Math.floor(Math.random() * 255);
+
+        var rgba = "rgb(" + rand1 + ", " + rand2 + ", " + rand3 + ")";
+        var rgbaa = "rgb(" + rand3 + ", " + rand1 + ", " + rand2 + ")";
+        document.body.style.backgroundColor = rgba;
+        hed.style.color=rgbaa;
+      }
+      setInterval(fun, 4000);
+
+      var interval;
+      function start(){
+         interval = setInterval(function(){
+        var d = new Date();
+        var time = d.toLocaleTimeString();
+        hed2.innerHTML =time;
+        },1000)
+      }
+
+      function stop(){
+        clearInterval(interval);
+      }
+    </script>
+  </body>
+</html>

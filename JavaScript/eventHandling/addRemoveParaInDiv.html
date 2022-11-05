@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <title>Document</title>
     <style>
       body {
@@ -25,19 +29,33 @@
         padding: 10px;
         border: 1px solid gray;
         border-radius: 10px;
+	cursor:pointer;
       }
       #main-div {
         width: 400px;
         height: 0px;
         background-color: rgb(198, 77, 243);
         border-radius: 20px;
-        margin: 15px auto;
+        margin: 25px auto;
+        position: relative;
       }
       #main-div p {
+        margin: 15px;
         font-size: 25px;
         text-align: center;
         font-style: italic;
         font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .deleteBtn{
+        font-size: 1rem;
+        background: none;
+        border: none;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+      }
+      .deleteBtn:hover{
+        font-size: 1.2rem;
       }
     </style>
   </head>
@@ -59,23 +77,41 @@
 
     function addPara() {
       count += 1;
-      divHeight += 60;
+      divHeight += 50;
       d.style.height = divHeight + "px";
       var para = document.createElement("p");
-      para.innerHTML = "new paragraph " + count;
+      // para.innerHTML = "new paragraph " + count;
+      para.innerHTML =`
+      new paragraph ${count} 
+      <button class="deleteBtn" id='${count}'><i class="fas fa-trash-alt"></i></button>
+      `
       var text = para.innerHTML;
       d.appendChild(para);
+
+      let deleteBtn = para.querySelector(".deleteBtn");
+      console.log(deleteBtn);
+      
+        deleteBtn.addEventListener("click",()=>{
+          // console.log("deleteBtn clicked" );
+          para.remove();
+          divHeight -=50;
+          d.style.height = divHeight + "px";
+          count--;
+        })
+      
     }
     function removePara() {
       if (count == 0) {
         return;
       } else {
-        divHeight -= 60;
+        divHeight -= 50;
         d.style.height = divHeight + "px";
         count -= 1;
         d.removeChild(d.lastChild);
       }
     }
+
+    
 
     addButton.addEventListener("click", addPara);
 
