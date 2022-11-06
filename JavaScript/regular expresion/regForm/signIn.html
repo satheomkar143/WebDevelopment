@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="signIn.css" />
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Login Here</h1>
+      <form name="loginForm" action="website.html" target="_blank" onsubmit="return submitForm()">
+        <div class="field">
+          <span class="fa fa-user"></span>
+          <input name="EmailId" type="text" placeholder="Enter Email Id"  onfocus="onFocusEmail()" onblur="onBlurEmail()" autofocus/>
+        </div>
+        <!-- ----------email error massage------- -->
+        <div id="email-error"></div>
+        <div class="field space">
+          <span class="fa fa-lock"></span>
+          <input
+            name="password"
+            type="password"
+            class="pass-key"
+            placeholder="Password"
+            onfocus="onFocusPassword()"
+            onblur="onBlurPassword()"
+          />
+        </div>
+        <!-- ---------password error massage------- -->
+        <div id="password-error"></div>
+        <div class="pass">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <div class="field login">
+          <input id="loginBtn" type="submit" value="LOGIN" />
+        </div>
+      </form>
+      <div class="login-with">Or login with</div>
+      <div class="links">
+        <div class="facebook">
+          <i class="fab fa-facebook-f"><span>Facebook</span></i>
+        </div>
+        <div class="instagram">
+          <i class="fab fa-instagram"><span>Instagram</span></i>
+        </div>
+      </div>
+      <div class="signup">
+        Don't have account?
+        <a href="signup.html" target="_blank">Signup Now</a>
+      </div>
+    </div>
+  </body>
+  <script src="signup.js"></script>
+  <script src="script.js"></script>
+  
+</html>

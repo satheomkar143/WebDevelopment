@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="home-container">
+      <h1>welcome to One Piece</h1>
+      <div class="sign-in-up">
+        <button id="sign-in">Sign In</button>
+        <button id="sign-up">Sign Up</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const signInButton = document.getElementById("sign-in");
+    const signUpButton = document.getElementById("sign-up");
+
+    // ------open new window on click on home page
+
+    signInButton.addEventListener("click", () => {
+      // console.log("sign in button clicked");
+      window.open("signIn.html", "_blank");
+    });
+
+    signUpButton.addEventListener("click", () => {
+      // console.log("sign up button clicked");
+      window.open("signup.html", "_blank");
+    });
+  </script>
+</html>

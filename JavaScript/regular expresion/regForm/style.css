@@ -1,0 +1,53 @@
+*{
+margin:0;
+padding:0;
+}
+
+body{
+  min-height:100vh;
+  min-width: 100vw;
+  background: url('home-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* -------------home page------------- */
+
+.home-container{
+  background: rgba(99, 4, 85,0.7);
+  height: 250px;
+  width: 450px;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px yellow;
+  text-align: center;
+}
+.home-container h1{
+  margin: 2rem 0.5rem 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 5px rgba(26, 0, 27,0.9);
+}
+.home-container button{
+  font-size: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 200px;
+  height: 50px;
+  text-shadow: 3px 3px 5px red;
+  cursor: pointer;
+}
+.home-container button:hover{
+  width: 210px;
+  height: 60px;
+  background-color: blueviolet;
+}
