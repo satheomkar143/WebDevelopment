@@ -15,7 +15,6 @@ function onFocusEmail() {
 
   if (countEmail === 0) {
     emailErr.innerHTML = "Email field is required";
-    emailErr.style.color = "red";
     loginForm.EmailId.focus();
   }
 }
@@ -25,7 +24,7 @@ function onBlurEmail() {
 
   if (email.length > 0) {
     if (userId === email) {
-      emailErr.innerHTML = "correct email";
+      emailErr.innerHTML = "";
       return true;
     } else {
       // alert("Email field is required");
@@ -60,7 +59,7 @@ function onBlurPassword() {
 
   if (pass.length > 0) {
     if (pass === userPass) {
-      passErr.innerHTML = "correct password";
+      passErr.innerHTML = "";
       return true;
     } else {
       loginForm.password.focus();
